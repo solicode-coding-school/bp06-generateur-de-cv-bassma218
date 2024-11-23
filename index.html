@@ -3,88 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Generator</title>
+    <title>CV Generator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
 </head>
 <body>
     <div class="container">
         <h1>CV Generator</h1>
-        <form>
+        <form id="cv-form">
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" placeholder="John Smith">
             </div>
             <div class="form-group">
-                <label for="job-title">Your Job Title</label>
+                <label for="job-title">Job Title</label>
                 <input type="text" id="job-title" placeholder="Web Developer">
             </div>
             <div class="form-group">
-                <label for="contact">Your Contact</label>
+                <label for="contact">Phone Number</label>
                 <input type="text" id="contact" placeholder="123-456-7890">
             </div>
             <div class="form-group">
-                <label for="email">Your Email</label>
+                <label for="email">Email Address</label>
                 <input type="email" id="email" placeholder="example@mail.com">
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <input type="text" id="address" placeholder="Sample Address">
+                <input type="text" id="address" placeholder="Your Address">
             </div>
             <div class="form-group">
-                <label for="birthday">Birthday</label>
+                <label for="birthday">Date of Birth</label>
                 <input type="date" id="birthday">
             </div>
-            <div class="form-group">
-                <label for="education">Education</label>
-                <textarea id="education" placeholder="List your education"></textarea>
-                <button id="add-btn">ADD</button>
-            </div>
-            <div class="professional-info1">
-                <h4>Professional Information</h4>
-                <label for="objective">OBJECTIVE</label><br>
-                <textarea name="objective-text" id="info-section" cols="30" rows="3"></textarea>
-            </div>
-            <h5>Work Experience</h5>
-            <div class="professional-info2">
-                <label for="your Experience">YOUR EXPERIENCE </label><br>
-                <input type="text"><br>
-                <button id="add-btn">ADD</button>
-            </div>
-            <div class="professional-info3">
-                <label for="Professional-skills"> Professional Skills</label><br>
-                <input type="text">
-                <input type="text"><br>
-                <button id="add-btn">ADD</button>
-            </div>
-    
-        </form>
-        <button id="generate-btn">Generetor CV</button>
 
+            <h2>Education</h2>
+            <div class="form-group education-section">
+                <label for="school-name">School Name</label>
+                <input type="text" id="school-name" placeholder="Your School Name">
+                <label for="start-date">Start Date</label>
+                <input type="date" id="start-date">
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date">
+            </div>
+            <button id="add-btn1" type="button">Add Education</button>
+
+            <h2>Objective</h2>
+            <div class="form-group">
+                <label for="info-section">Your Objective</label>
+                <textarea id="info-section" rows="3" placeholder="Write your career objective"></textarea>
+            </div>
+
+            <h2>Work Experience</h2>
+            <div class="professional-info2">
+                <label for="experience">Your Experience</label>
+                <input type="text" placeholder="Your Job or Role">
+            </div>
+            <button id="add-btn3" type="button">Add Experience</button>
+
+            <h2>Skills</h2>
+            <div class="professional-info3">
+                <label for="skill">Professional Skills</label>
+                <input type="text" placeholder="Your Skill">
+            </div>
+            <button id="add-btn4" type="button">Add Skill</button>
+
+            <button id="generate-btn" type="button">Generate CV</button>
+        </form>
     </div>
-    <script srs="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
